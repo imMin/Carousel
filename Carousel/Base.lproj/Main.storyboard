@@ -702,7 +702,7 @@
                                 <state key="selected" backgroundImage="checkbox_complete"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gic-tT-xa5">
-                                <rect key="frame" x="20" y="408" width="25" height="25"/>
+                                <rect key="frame" x="20" y="473" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="checkbox_unchecked">
