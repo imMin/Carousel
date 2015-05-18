@@ -40,10 +40,8 @@ Optional: Learn more about Carousel
 * [x] Optional: Tap the X to dismiss the banner
  Optional: Track the 3 events:
 * [x]View a photo full screen
-Swipe left and right
 * [x] Share a photo
 * [x] Optional: Upon completion of the events, mark them green.
-Optional: When all events are completed, dismiss the banner.
 
 
 GIF walkthrough of all user stories:
