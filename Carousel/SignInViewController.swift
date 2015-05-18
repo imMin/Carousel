@@ -186,7 +186,7 @@ class SignInViewController: UIViewController {
 		var defaults = NSUserDefaults.standardUserDefaults()
 		defaults.setBool(false, forKey: "did_view_photo_full_screen")
 		defaults.setBool(false, forKey: "did_share_photo")
-		defaults.setBool(false, forKey: "did_swipe_photo")
+		
 		
 	}
 		

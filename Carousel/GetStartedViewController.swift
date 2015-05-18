@@ -14,8 +14,6 @@ class GetStartedViewController: UIViewController {
 	
 	@IBOutlet weak var secondCheckBoxButton: UIButton!
 	
-	@IBOutlet weak var thirdCheckBoxButton: UIButton!
-	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -31,17 +29,6 @@ class GetStartedViewController: UIViewController {
 		
 		if (secondCheckBox == true){
 			secondCheckBoxButton.selected = true
-		}
-		
-		var thirdCheckBox = defaults.boolForKey("did_swipe_photo")
-		
-		if (thirdCheckBox == true){
-			thirdCheckBoxButton.selected = true
-		}
-		
-		if firstCheckBoxButton.selected && secondCheckBoxButton.selected && thirdCheckBoxButton.selected {
-			dismissViewControllerAnimated(true, completion: nil)
-			
 		}
 		
 		
