@@ -8,13 +8,22 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UIScrollViewDelegate {
 
 	@IBOutlet weak var shareOverLayView: UIImageView!
 	
+	@IBOutlet weak var scrollView: UIScrollView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+//		var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "onCustomPan:")
+		
+//		scrollView.addGestureRecognizer(panGestureRecognizer)
+		
+		scrollView.delegate = self
+		
+		scrollView.contentSize = CGSize(width: 960, height: 568)
 		
 		var defaults = NSUserDefaults.standardUserDefaults()
 		defaults.setBool(true, forKey: "did_view_photo_full_screen")
@@ -44,6 +53,23 @@ class PhotoViewController: UIViewController {
 	@IBAction func didPressBackButton(sender: AnyObject) {
 		navigationController!.popViewControllerAnimated(true)
 	}
+	
+	func scrollViewDidScroll(scrollView: UIScrollView) {
+		
+		var defaults = NSUserDefaults.standardUserDefaults()
+		defaults.setBool(true, forKey: "did_swipe_photo")
+
+	}
+	
+//	func onCustomPan(panGestureRecognizer: UIPanGestureRecognizer){
+//		var point = panGestureRecognizer.locationInView(view)
+//		var velocity = panGestureRecognizer.velocityInView(view)
+//		
+//		if panGestureRecognizer.state == UIGestureRecognizerState.Began {
+//			
+//		}
+//	}
+	
 	
 	/*
     // MARK: - Navigation

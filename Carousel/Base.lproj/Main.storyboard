@@ -554,13 +554,27 @@
             <objects>
                 <viewController id="B4Q-aT-Zka" customClass="PhotoViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nGh-vx-xbQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1124"/>
+                        <rect key="frame" x="0.0" y="0.0" width="960" height="1124"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Photo May 17, 9 49 24 PM" id="5HJ-ZE-ySH">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="E8I-5b-y4W">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Photo May 17, 9 49 24 PM" id="5HJ-ZE-ySH">
+                                        <rect key="frame" x="320" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Photo May 17, 9 40 15 PM" id="Vjz-ku-Fsp">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Photo May 17, 9 40 18 PM" id="gvh-Kh-ctT">
+                                        <rect key="frame" x="640" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gyy-C7-mJ7">
                                 <rect key="frame" x="18" y="530" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -601,7 +615,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Th4-b9-1AL"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="960" height="1124"/>
                     <connections>
+                        <outlet property="scrollView" destination="E8I-5b-y4W" id="7o9-yM-0fZ"/>
                         <outlet property="shareOverLayView" destination="c6l-YX-Spz" id="FnD-Rk-BXT"/>
                     </connections>
                 </viewController>
@@ -702,6 +719,15 @@
                                 <state key="selected" backgroundImage="checkbox_complete"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gic-tT-xa5">
+                                <rect key="frame" x="20" y="472" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="checkbox_unchecked">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="checkbox_complete"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BDs-HO-yPw">
                                 <rect key="frame" x="20" y="408" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -716,6 +742,7 @@
                     <connections>
                         <outlet property="firstCheckBoxButton" destination="rNu-7M-Lf5" id="P1w-vj-YYU"/>
                         <outlet property="secondCheckBoxButton" destination="gic-tT-xa5" id="Drv-ry-UrX"/>
+                        <outlet property="thirdCheckBoxButton" destination="BDs-HO-yPw" id="EVR-Xb-Tiv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4n6-kg-qkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -798,6 +825,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Photo May 17, 9 40 15 PM" width="640" height="1136"/>
+        <image name="Photo May 17, 9 40 18 PM" width="640" height="1136"/>
         <image name="Photo May 17, 9 49 24 PM" width="640" height="1136"/>
         <image name="Photo May 17, 9 49 48 PM" width="640" height="1136"/>
         <image name="TOS header" width="640" height="91"/>
